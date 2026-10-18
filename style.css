@@ -615,8 +615,12 @@ a:focus-visible {
   row-gap: 50px;
 }
 
+
 .project {
+  display: flex;
+  flex-direction: column;
   min-width: 0;
+  height: 100%;
 }
 
 .project[hidden] {
@@ -626,6 +630,7 @@ a:focus-visible {
 .project-visual {
   position: relative;
   min-height: 300px;
+  aspect-ratio: 4 / 3;
   display: block;
   overflow: hidden;
   isolation: isolate;
@@ -922,34 +927,45 @@ a:focus-visible {
 
 /* PROJECT INFORMATION */
 
+
+/* PROJECT INFORMATION */
+
 .project-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
   padding-top: 20px;
 }
 
 .project-type {
   color: var(--accent);
-  font: .63rem var(--mono);
-  letter-spacing: .8px;
+  font: 0.63rem var(--mono);
+  letter-spacing: 0.8px;
+  line-height: 1.5;
 }
 
 .project-info h3 {
   margin: 9px 0 10px;
   font-size: clamp(1.3rem, 2vw, 1.8rem);
-  letter-spacing: -.055em;
+  letter-spacing: -0.04em;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
 }
 
 .project-info > p {
   max-width: 520px;
+  margin: 0;
   color: var(--muted);
-  font-size: .84rem;
-  line-height: 1.9;
+  font-size: 0.84rem;
+  line-height: 1.8;
 }
 
 .project-footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: 10px 12px;
   margin-top: 20px;
   padding-top: 14px;
   border-top: 1px solid var(--line);
@@ -957,12 +973,13 @@ a:focus-visible {
 
 .project-footer > span {
   color: var(--muted);
-  font-size: .68rem;
+  font-size: 0.68rem;
+  line-height: 1.6;
 }
 
 .project-footer > a {
   color: var(--accent);
-  font-size: .71rem;
+  font-size: 0.71rem;
   font-weight: 800;
   white-space: nowrap;
 }
@@ -970,6 +987,7 @@ a:focus-visible {
 .project-footer > a:hover {
   text-decoration: underline;
 }
+
 
 .all-projects {
   display: flex;
@@ -1342,6 +1360,7 @@ a:focus-visible {
     grid-template-columns: 1fr;
     row-gap: 38px;
   }
+
 
   .project-visual {
     min-height: 290px;
