@@ -611,8 +611,8 @@ a:focus-visible {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 26px;
-  row-gap: 50px;
+  column-gap: 22px;
+  row-gap: 30px;
 }
 
 
@@ -629,8 +629,8 @@ a:focus-visible {
 
 .project-visual {
   position: relative;
-  min-height: 300px;
-  aspect-ratio: 4 / 3;
+  min-height: 220px;
+  aspect-ratio: 16 / 10;
   display: block;
   overflow: hidden;
   isolation: isolate;
@@ -956,8 +956,8 @@ a:focus-visible {
   max-width: 520px;
   margin: 0;
   color: var(--muted);
-  font-size: 0.84rem;
-  line-height: 1.8;
+  font-size: 0.82rem;
+  line-height: 1.65;
 }
 
 .project-footer {
@@ -965,9 +965,9 @@ a:focus-visible {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 10px 12px;
-  margin-top: 20px;
-  padding-top: 14px;
+  gap: 8px 12px;
+  margin-top: 14px;
+  padding-top: 12px;
   border-top: 1px solid var(--line);
 }
 
