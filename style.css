@@ -622,8 +622,9 @@ a:focus-visible {
 .project {
   display: flex;
   flex-direction: column;
+  align-self: stretch;
   min-width: 0;
-  height: 100%;
+  min-height: 0;
 }
 
 .project[hidden] {
@@ -632,6 +633,8 @@ a:focus-visible {
 
 .project-visual {
   position: relative;
+  flex: 0 0 auto;
+  width: 100%;
   min-height: 0;
   aspect-ratio: 16 / 9;
   display: block;
@@ -930,13 +933,12 @@ a:focus-visible {
 
 /* PROJECT INFORMATION */
 
-
-/* PROJECT INFORMATION */
-
 .project-info {
   display: flex;
   flex-direction: column;
+  flex: 1 1 auto;
   min-width: 0;
+  min-height: 0;
   padding-top: 12px;
 }
 
@@ -963,32 +965,73 @@ a:focus-visible {
   line-height: 1.45;
 }
 
+.project-info > .project-technologies {
+  margin-top: 9px;
+  font-size: 0.68rem;
+}
+
+.project-technologies strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
 .project-footer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  gap: 8px 12px;
-  margin-top: 14px;
+  gap: 8px;
+  margin-top: auto;
   padding-top: 12px;
   border-top: 1px solid var(--line);
 }
 
 .project-footer > span {
+  flex: 0 0 100%;
+  min-width: 0;
   color: var(--muted);
   font-size: 0.68rem;
   line-height: 1.6;
 }
 
-.project-footer > a {
-  color: var(--accent);
-  font-size: 0.71rem;
+.project-footer > .project-action {
+  display: inline-flex;
+  flex: 0 0 auto;
+  min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 11px;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  font-size: 0.68rem;
   font-weight: 800;
+  line-height: 1.2;
   white-space: nowrap;
+  transition: color .2s, background .2s, border-color .2s, transform .2s;
 }
 
-.project-footer > a:hover {
-  text-decoration: underline;
+.project-footer > .project-action-primary {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.project-footer > .project-action-secondary {
+  color: var(--accent);
+}
+
+.project-footer > .project-action:hover {
+  transform: translateY(-1px);
+}
+
+.project-footer > .project-action-primary:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+
+.project-footer > .project-action-secondary:hover {
+  background: var(--accent-light);
 }
 
 
